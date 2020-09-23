@@ -1,16 +1,16 @@
 [package]
-name = "zunitoken _jni"
+name = "zunitoken_jni"
 version = "0.1.0"
 authors = ["Igor Gulamov <igor.gulamov@gmail.com>"]
 edition = "2018"
 
 [lib]
 crate-type = ["cdylib"]
-name = "zunitoken _jni"
+name = "zunitoken_jni"
 
 [dependencies]
 bellman = { version = "0.1.0" }
-zunitoken _primitives = { path = "../zunitoken _primitives"}
+zunitoken_primitives = { path = "../zunitoken_primitives"}
 sapling-crypto = { path = "../sapling-crypto" }
 pairing = "0.14"
 num = "0.2"

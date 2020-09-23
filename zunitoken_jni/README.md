@@ -2,7 +2,7 @@
 
 ## Build
 
-To build `zunitoken .jar` we need to cross compile the library for Linux, Windows and MacOS. 
+To build `zunitoken.jar` we need to cross compile the library for Linux, Windows and MacOS. 
 This HOWTO is working for `rust 1.38+ stable` and Ubuntu 64bit.
 
 
@@ -41,4 +41,4 @@ rustup target add x86_64-unknown-linux-gnu
 ./build_all.sh 
 ```
 
-Get `zunitoken .jar` from `javalib/build/libs/zunitoken .jar`.
+Get `zunitoken.jar` from `javalib/build/libs/zunitoken.jar`.

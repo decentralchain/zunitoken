@@ -112,9 +112,9 @@ func transferExternal(proof:ByteVector, v:ByteVector, m:ByteVector) = {
         else throw()
 
     if (assetId != 0 || amount != 0) 
-        then throw("TODO: implement mapping from unitoken  assetId into internal u64 asset_id to transfer tokens")
+        then throw("TODO: implement mapping from unitoken assetId into internal u64 asset_id to transfer tokens")
     else if (withdrawNativeAmount < 0)
-        then throw("not enough unitoken  to process transaction and positive number of money")
+        then throw("not enough unitoken to process transaction and positive number of money")
     else if (flagExists(nf0) || flagExists(nf1))
         then throw("doublespend detected")
     else if (flagExists(outHash0) || flagExists(outHash1))
@@ -166,9 +166,9 @@ func transferInternal(proof:ByteVector, v:ByteVector, m:ByteVector) = {
     if (i.caller!=this) then
         throw("wrong caller")
     else if (assetId != 0 || amount != 0) 
-        then throw("TODO: implement mapping from unitoken  assetId into internal u64 asset_id to transfer tokens")
+        then throw("TODO: implement mapping from unitoken assetId into internal u64 asset_id to transfer tokens")
     else if (withdrawNativeAmount < 0)
-        then throw("not enough unitoken  to process transaction and positive number of money")
+        then throw("not enough unitoken to process transaction and positive number of money")
     else if (flagExists(nf0) || flagExists(nf1))
         then throw("doublespend detected")
     else if (flagExists(outHash0) || flagExists(outHash1))

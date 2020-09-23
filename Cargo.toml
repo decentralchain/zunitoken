@@ -1,11 +1,11 @@
 [workspace]
 members = [
-  "zunitoken _primitives",
-  "zunitoken _circuit",
-  "zunitoken _jni",
+  "zunitoken_primitives",
+  "zunitoken_circuit",
+  "zunitoken_jni",
   "sapling-crypto",
-  "zunitoken _setup",
-  "zunitoken _node/native"
+  "zunitoken_setup",
+  "zunitoken_node/native"
 ]
 
 [profile.release]

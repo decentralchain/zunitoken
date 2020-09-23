@@ -1,5 +1,5 @@
 [package]
-name = "zunitoken _setup"
+name = "zunitoken_setup"
 version = "0.1.0"
 authors = ["Igor Gulamov <igor.gulamov@gmail.com>"]
 edition = "2018"
@@ -21,7 +21,7 @@ sapling-crypto = { path = "../sapling-crypto" }
 pairing = "0.14"
 phase2 = "0.2.2"
 hex = "0.3.1"
-zunitoken _circuit = { path = "../zunitoken _circuit" }
+zunitoken_circuit = { path = "../zunitoken_circuit" }
 
 [dependencies.blake2-rfc]
 git = "https://github.com/gtank/blake2-rfc"

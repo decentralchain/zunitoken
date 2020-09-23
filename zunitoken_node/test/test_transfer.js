@@ -21,7 +21,7 @@ function utxo(asset_id, amount, native_amount, txid, owner) {
 
 
 let fs = require("fs");
-let mpc_params = fs.readFileSync("../zunitoken _setup/mpc_params_transfer");
+let mpc_params = fs.readFileSync("../zunitoken_setup/mpc_params_transfer");
 
 
 let sk = fs_random();

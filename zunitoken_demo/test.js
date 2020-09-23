@@ -1,6 +1,6 @@
-const { broadcast, waitForTx, setScript, invokeScript, nodeInteraction } = require("@unitoken /unitoken -transactions");
-const { address, base58Encode, base58Decode, publicKey, privateKey } = require("@unitoken /unitoken -crypto");
-const {extract_vk, MerkleTree, transfer, pubkey, fs_random, fr_random, verify, bufferizeBigints, debufferizeBigints, note_hash} = require("../zunitoken _node/lib/index.js");
+const { broadcast, waitForTx, setScript, invokeScript, nodeInteraction } = require("@unitoken/unitoken-transactions");
+const { address, base58Encode, base58Decode, publicKey, privateKey } = require("@unitoken/unitoken-crypto");
+const {extract_vk, MerkleTree, transfer, pubkey, fs_random, fr_random, verify, bufferizeBigints, debufferizeBigints, note_hash} = require("../zunitoken_node/lib/index.js");
 
 const fs = require("fs");
 const env = process.env;
@@ -16,8 +16,8 @@ function utxo(asset_id, amount, native_amount, txid, owner) {
 const sleep = m => new Promise(r => setTimeout(r, m));
 
 let seed = env.MNEMONIC;
-const rpc = env.unitoken _RPC;
-const chainId = env.unitoken _CHAINID;
+const rpc = env.unitoken_RPC;
+const chainId = env.unitoken_CHAINID;
 
 
 const dAppPk = env.DAPP;
@@ -49,8 +49,8 @@ const fee = 900000;
 let transferFee = 400000n;
 let accumulatorFee = 400000n;
 
-const transfer_mpc = fs.readFileSync("../zunitoken _setup/mpc_params_transfer");
-const accumulator_mpc = fs.readFileSync("../zunitoken _setup/mpc_params_accumulator");
+const transfer_mpc = fs.readFileSync("../zunitoken_setup/mpc_params_transfer");
+const accumulator_mpc = fs.readFileSync("../zunitoken_setup/mpc_params_accumulator");
 
 
 
@@ -90,7 +90,7 @@ console.log(verify(extract_vk(transfer_mpc), res));
 (async()=>{
 
 
-console.log(`unitoken  balance before transfer:\t\t${await nodeInteraction.balance(address(seed, chainId), rpc)}`);
+console.log(`unitoken balance before transfer:\t\t${await nodeInteraction.balance(address(seed, chainId), rpc)}`);
 
 let tx = invokeScript({
   dApp,
@@ -109,7 +109,7 @@ await waitForTx(tx.id, { apiBase: rpc });
 console.log(`transaction complete`)
 
 await sleep(10000);
-console.log(`unitoken  balance after transfer:\t\t${await nodeInteraction.balance(address(seed, chainId), rpc)}`);
+console.log(`unitoken balance after transfer:\t\t${await nodeInteraction.balance(address(seed, chainId), rpc)}`);
 
 /*
 

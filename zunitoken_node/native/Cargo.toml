@@ -1,5 +1,5 @@
 [package]
-name = "zunitoken _node"
+name = "zunitoken_node"
 version = "0.1.0"
 authors = ["Igor Gulamov <igor.gulamov@gmail.com>"]
 license = "MIT"
@@ -7,7 +7,7 @@ build = "build.rs"
 exclude = ["artifacts.json", "index.node"]
 
 [lib]
-name = "zunitoken _node"
+name = "zunitoken_node"
 crate-type = ["cdylib"]
 
 [build-dependencies]
@@ -19,8 +19,8 @@ neon = "0.3.3"
 rand = "0.4"
 bellman = { version = "0.1.0"}
 sapling-crypto = { path = "../../sapling-crypto" }
-zunitoken _primitives = {path = "../../zunitoken _primitives"}
-zunitoken _circuit = {path = "../../zunitoken _circuit"}
+zunitoken_primitives = {path = "../../zunitoken_primitives"}
+zunitoken_circuit = {path = "../../zunitoken_circuit"}
 
 pairing = "0.14"
 phase2 = "0.2.2"

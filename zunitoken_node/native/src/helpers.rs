@@ -17,13 +17,13 @@ use sapling_crypto::pedersen_hash::{Personalization};
 use sapling_crypto::circuit::{pedersen_hash};
 use sapling_crypto::circuit::num::{AllocatedNum, Num};
 use bellman::groth16::{Proof, generate_random_parameters, prepare_verifying_key, create_random_proof, verify_proof};
-use zunitoken _circuit::circuit::{Transfer, MERKLE_PROOF_LEN};
-use zunitoken _primitives::transactions::NoteData;
-use zunitoken _primitives::fieldtools::fr_to_repr_bool;
-use zunitoken _primitives::serialization::read_fr_repr_be;
+use zunitoken_circuit::circuit::{Transfer, MERKLE_PROOF_LEN};
+use zunitoken_primitives::transactions::NoteData;
+use zunitoken_primitives::fieldtools::fr_to_repr_bool;
+use zunitoken_primitives::serialization::read_fr_repr_be;
 use arrayvec::ArrayVec;
 
-use zunitoken _primitives::verifier;
+use zunitoken_primitives::verifier;
 
 
 
