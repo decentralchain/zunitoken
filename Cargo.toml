@@ -7,7 +7,7 @@ members = [
   "zunitoken_setup",
   "zunitoken_node/native"
 ]
-
+crate-type = ["cdylib", "rlib"]
 [profile.release]
 lto = true
 panic = 'abort'
