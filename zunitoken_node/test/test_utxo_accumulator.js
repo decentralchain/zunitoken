@@ -2,7 +2,7 @@ let {utxoAccumulator, MerkleTree, fr_random, verify, extract_vk} = require("../l
 
 
 let fs = require("fs");
-let mpc_params = fs.readFileSync("../zwaves_setup/mpc_params_accumulator");
+let mpc_params = fs.readFileSync("../zunitoken _setup/mpc_params_accumulator");
 
 let mt = new MerkleTree(48);
 

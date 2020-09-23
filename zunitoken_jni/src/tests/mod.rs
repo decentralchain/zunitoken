@@ -13,9 +13,9 @@ use rand::os::OsRng;
 use rand::Rng;
 
 use std::io::{Cursor, Read, Seek, SeekFrom, Write};
-use zwaves_primitives::verifier::{truncate_verifying_key, TruncatedVerifyingKey, verify_proof};
-use zwaves_primitives::serialization::write_fr_iter;
-use zwaves_primitives::pedersen_hasher;
+use zunitoken _primitives::verifier::{truncate_verifying_key, TruncatedVerifyingKey, verify_proof};
+use zunitoken _primitives::serialization::write_fr_iter;
+use zunitoken _primitives::pedersen_hasher;
 
 use base64::encode;
 use std::iter;

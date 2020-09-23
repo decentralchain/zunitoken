@@ -1,11 +1,11 @@
 [workspace]
 members = [
-  "zwaves_primitives",
-  "zwaves_circuit",
-  "zwaves_jni",
+  "zunitoken _primitives",
+  "zunitoken _circuit",
+  "zunitoken _jni",
   "sapling-crypto",
-  "zwaves_setup",
-  "zwaves_node/native"
+  "zunitoken _setup",
+  "zunitoken _node/native"
 ]
 
 [profile.release]

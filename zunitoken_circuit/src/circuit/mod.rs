@@ -11,9 +11,9 @@ use rand::Rng;
 use sapling_crypto::constants;
 
 use sapling_crypto::pedersen_hash::{pedersen_hash, Personalization};
-use zwaves_primitives::circuit::transactions;
-use zwaves_primitives::transactions::NoteData;
-use zwaves_primitives::fieldtools;
+use zunitoken _primitives::circuit::transactions;
+use zunitoken _primitives::transactions::NoteData;
+use zunitoken _primitives::fieldtools;
 
 
 use blake2_rfc::blake2s::Blake2s;

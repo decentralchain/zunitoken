@@ -4,8 +4,8 @@ extern crate arrayvec;
 extern crate pairing;
 extern crate sapling_crypto;
 extern crate bellman;
-extern crate zwaves_circuit;
-extern crate zwaves_primitives;
+extern crate zunitoken _circuit;
+extern crate zunitoken _primitives;
 extern crate phase2;
 extern crate rand;
 
@@ -30,11 +30,11 @@ use sapling_crypto::pedersen_hash::{Personalization};
 use sapling_crypto::circuit::{pedersen_hash};
 use sapling_crypto::circuit::num::{AllocatedNum, Num};
 use bellman::groth16::{Proof, generate_random_parameters, prepare_verifying_key, create_random_proof, verify_proof};
-use zwaves_circuit::circuit::{Transfer, MERKLE_PROOF_LEN, UtxoAccumulator};
-use zwaves_primitives::transactions::NoteData;
-use zwaves_primitives::fieldtools::fr_to_repr_bool;
-use zwaves_primitives::serialization::read_fr_repr_be;
-use zwaves_primitives::verifier;
+use zunitoken _circuit::circuit::{Transfer, MERKLE_PROOF_LEN, UtxoAccumulator};
+use zunitoken _primitives::transactions::NoteData;
+use zunitoken _primitives::fieldtools::fr_to_repr_bool;
+use zunitoken _primitives::serialization::read_fr_repr_be;
+use zunitoken _primitives::verifier;
 use arrayvec::ArrayVec;
 
 use crate::helpers::*;
@@ -77,7 +77,7 @@ pub fn note_hash(mut cx: FunctionContext) ->JsResult<JsBuffer> {
     let note_obj : Handle<JsObject> = cx.argument(0)?;
     let note = parse_note_data(&mut cx, note_obj)?;
     
-    let hash = zwaves_primitives::transactions::note_hash(&note, &JUBJUB_PARAMS);
+    let hash = zunitoken _primitives::transactions::note_hash(&note, &JUBJUB_PARAMS);
     fr_to_js(&mut cx, &hash)
 }
 
@@ -86,14 +86,14 @@ pub fn nullifier(mut cx: FunctionContext) ->JsResult<JsBuffer> {
     let note_hash = read_buf_fr(&mut cx, note_hash)?;
     let sk : Handle<JsBuffer> = cx.argument(1)?;
     let sk = read_buf_fr(&mut cx, sk)?;
-    let nf = zwaves_primitives::transactions::nullifier::<Bls12>(&note_hash, &sk, &JUBJUB_PARAMS);
+    let nf = zunitoken _primitives::transactions::nullifier::<Bls12>(&note_hash, &sk, &JUBJUB_PARAMS);
     fr_to_js(&mut cx, &nf)
 }
 
 pub fn pubkey(mut cx: FunctionContext) ->JsResult<JsBuffer> {
     let sk : Handle<JsBuffer> = cx.argument(0)?;
     let sk = read_buf_fr(&mut cx, sk)?;
-    let nf = zwaves_primitives::transactions::pubkey::<Bls12>(&sk, &JUBJUB_PARAMS);
+    let nf = zunitoken _primitives::transactions::pubkey::<Bls12>(&sk, &JUBJUB_PARAMS);
     fr_to_js(&mut cx, &nf)
 }
 
@@ -102,7 +102,7 @@ pub fn edh(mut cx: FunctionContext) ->JsResult<JsBuffer> {
     let pk = read_buf_fr(&mut cx, pk)?;
     let sk : Handle<JsBuffer> = cx.argument(1)?;
     let sk = read_buf_fr(&mut cx, sk)?;
-    let nf = zwaves_primitives::transactions::edh::<Bls12>(&pk, &sk, &JUBJUB_PARAMS).ok_or(()).or_else(|_| cx.throw_error("Not an elliptic curve point"))?;
+    let nf = zunitoken _primitives::transactions::edh::<Bls12>(&pk, &sk, &JUBJUB_PARAMS).ok_or(()).or_else(|_| cx.throw_error("Not an elliptic curve point"))?;
     fr_to_js(&mut cx, &nf)
 }
 
@@ -227,7 +227,7 @@ pub fn merkle_hash(mut cx: FunctionContext) -> JsResult<JsBuffer> {
     if n.fract() != 0.0 {
         return cx.throw_error("3rd parameter should be integer");
     }
-    let hash = zwaves_primitives::pedersen_hasher::compress::<Bls12>(&left, &right, Personalization::MerkleTree(n.round() as usize), &JUBJUB_PARAMS);
+    let hash = zunitoken _primitives::pedersen_hasher::compress::<Bls12>(&left, &right, Personalization::MerkleTree(n.round() as usize), &JUBJUB_PARAMS);
     fr_to_js(&mut cx, &hash)
 }
 

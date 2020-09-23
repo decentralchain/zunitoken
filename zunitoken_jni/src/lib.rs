@@ -14,8 +14,8 @@ use std::{mem, io, iter};
 use std::io::{Read, Write};
 use byteorder::{BigEndian, ReadBytesExt};
 
-use zwaves_primitives::serialization::{read_fr_repr_be, read_fr_vec};
-use zwaves_primitives::verifier::{TruncatedVerifyingKey, verify_proof};
+use zunitoken _primitives::serialization::{read_fr_repr_be, read_fr_vec};
+use zunitoken _primitives::verifier::{TruncatedVerifyingKey, verify_proof};
 
 
 fn parse_jni_bytes(env: &JNIEnv, jv: jbyteArray) -> Vec<u8> {
@@ -75,7 +75,7 @@ fn groth16_verify(vk:&[u8], proof:&[u8], inputs:&[u8]) -> io::Result<u8> {
 
 
 #[no_mangle]
-pub extern "system" fn Java_com_wavesplatform_zwaves_bls12_Groth16_verify(env: JNIEnv,
+pub extern "system" fn Java_com_decentralchain_zunitoken _bls12_Groth16_verify(env: JNIEnv,
                                              class: JClass,
                                              jvk: jbyteArray,
                                              jproof: jbyteArray,

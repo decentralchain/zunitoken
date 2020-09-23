@@ -1,9 +1,9 @@
-package com.wavesplatform.zwaves.bls12;
+package com.decentralchain.zunitoken .bls12;
 
 public class Groth16 {
     public static native boolean verify(byte[] vk, byte[] proof, byte[] inputs);
 
     static {
-        new JNILibrary("zwaves_jni", Groth16.class).load();
+        new JNILibrary("zunitoken _jni", Groth16.class).load();
     }
 }

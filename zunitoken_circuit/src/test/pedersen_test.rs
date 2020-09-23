@@ -42,7 +42,7 @@ impl <E: JubjubEngine> Circuit<E> for PedersenDemo<E> {
 mod tests {
     use super::*;
 //    use test::Bencher;
-    use zwaves_primitives::pedersen_hasher;
+    use zunitoken _primitives::pedersen_hasher;
     //use sapling_crypto::circuit::test::TestConstraintSystem;
 
 

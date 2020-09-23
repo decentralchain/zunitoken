@@ -46,6 +46,6 @@ sampleDB*
 # jenv
 .java-version
 
-libzwaves_jni.so
-libzwaves_jni.dylib
-zwaves_jni.dll
+libzunitoken _jni.so
+libzunitoken _jni.dylib
+zunitoken _jni.dll
